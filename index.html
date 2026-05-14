@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 
@@ -5,11 +6,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio-Tanadol Wanbanjob</title>
-  <!-- preconnect ก่อนเสมอ เพื่อ performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700;800&family=Black+Han+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,390 +21,505 @@
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- NAV -->
-  <nav id="mainNav">
-    <a class="nav-logo" href="#hero">Portfolio-Tanadol</a>
-    <!-- Hamburger (mobile) -->
-    <button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">เกี่ยวกับฉัน</a></li>
-      <li><a href="#education">การศึกษา</a></li>
-      <li><a href="#skills">ทักษะ</a></li>
-      <li><a href="#experience">ประสบการณ์</a></li>
-      <li><a href="#college-projects">ผลงานในมหาลัย</a></li>
-      <li><a href="#work-projects">ผลงานในการทำงาน</a></li>
-      <li><a href="#contact">ติดต่อ</a></li>
-    </ul>
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="nav-logo navbar-brand" href="#hero">Portfolio-Tanadol</a>
+      <button class="nav-toggle navbar-toggler" id="navToggle" aria-label="เปิดเมนู" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinksCollapse">
+        <ul class="nav-links navbar-nav ms-auto" id="navLinks">
+          <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับฉัน</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">การศึกษา</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">ทักษะ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">ประสบการณ์</a></li>
+          <li class="nav-item"><a class="nav-link" href="#college-projects">ผลงานในมหาลัย</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work-projects">ผลงานในการทำงาน</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อ</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-particles" id="particles"></div>
     <div class="hero-grid-lines"></div>
+    <div class="container-fluid px-4 px-lg-5 h-100">
+      <div class="row align-items-center g-5 h-100">
 
-    <div class="hero-left">
-      <div class="hero-tag">
-        <div class="dot"></div>Showcase Portfolio
-      </div>
-      <h1 class="hero-name">ธนดล<br><span class="blue">วันบรรจบ</span></h1>
-      <p class="hero-subtitle">นายธนดล วันบรรจบ &nbsp;·&nbsp; "ดิว" &nbsp;·&nbsp; อายุ 26 ปี</p>
-      <p class="hero-desc">Webmaster ผู้ดูแลเว็บไซต์ อัพเดตข้อมูล และบริหารจัดการเนื้อหาผ่าน CMS ให้กับองค์กรระดับมหาชน พร้อมทักษะ IT Support แก้ปัญหา Hardware &amp; Software</p>
-      <div class="hero-cta">
-        <a href="#work-projects" class="btn btn-primary">ดูผลงาน</a>
-        <a href="#contact" class="btn btn-outline">ติดต่อฉัน</a>
-      </div>
-    </div>
+        <div class="col-lg-6 hero-left">
+          <div class="hero-tag">
+            <div class="dot"></div>Showcase Portfolio
+          </div>
+          <h1 class="hero-name">ธนดล<br><span class="blue">วันบรรจบ</span></h1>
+          <p class="hero-subtitle">นายธนดล วันบรรจบ &nbsp;·&nbsp; "ดิว" &nbsp;·&nbsp; อายุ 26 ปี</p>
+          <p class="hero-desc">Webmaster ผู้ดูแลเว็บไซต์ อัพเดตข้อมูล และบริหารจัดการเนื้อหาผ่าน CMS ให้กับองค์กรระดับมหาชน พร้อมทักษะ IT Support แก้ปัญหา Hardware &amp; Software</p>
+          <div class="hero-cta d-flex flex-wrap gap-3">
+            <a href="#work-projects" class="btn btn-primary">ดูผลงาน</a>
+            <a href="#contact" class="btn btn-outline">ติดต่อฉัน</a>
+          </div>
+        </div>
 
-    <div class="hero-right">
-      <div class="hero-laptop-frame">
-        <img src="/Portfolio/assets/notebook-1.webp" alt="Coding laptop" loading="eager">
-      </div>
-      <!-- <div class="hero-stats">
-        <div class="stat-pill">
-          <div class="stat-num"><a href="#education">การศึกษา</a></div>
-          <div class="stat-lbl"></div>
+        <div class="col-lg-6 hero-right">
+          <div class="hero-laptop-frame">
+            <img src="/Portfolio/assets/notebook-1.webp" alt="Coding laptop" loading="eager" class="img-fluid">
+          </div>
+          <div class="hero-stats row g-3 mt-2">
+            <div class="col-4">
+              <div class="stat-pill text-center">
+                <div class="stat-num">2+</div>
+                <div class="stat-lbl">ปีประสบการณ์</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-pill text-center">
+                <div class="stat-num">12+</div>
+                <div class="stat-lbl">บริษัทชั้นนำ</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-pill text-center">
+                <div class="stat-num">4+</div>
+                <div class="stat-lbl">โปรเจค</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="stat-pill">
-          <div class="stat-num"><a href="#skills">ทักษะ</a></div>
-          <div class="stat-lbl"></div>
-        </div>
-        <div class="stat-pill">
-          <div class="stat-num"><a href="#experience">ประสบการณ์</a></div>
-          <div class="stat-lbl"></div>
-        </div>
-      </div> -->
-      <div class="hero-stats">
-        <div class="stat-pill">
-          <div class="stat-num">2+</div>
-          <div class="stat-lbl">ปีประสบการณ์</div>
-        </div>
-        <div class="stat-pill">
-          <div class="stat-num">12+</div>
-          <div class="stat-lbl">บริษัทชั้นนำ</div>
-        </div>
-        <div class="stat-pill">
-          <div class="stat-num">4+</div>
-          <div class="stat-lbl">โปรเจค</div>
-        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="section-label reveal">About Me</div>
-    <h2 class="section-title reveal">เกี่ยว<span class="blue">กับฉัน</span></h2>
-    <div class="about-grid">
-      <div class="profile-wrap reveal">
-        <div class="profile-ring"></div>
-        <img src="/Portfolio/assets/tanadol-1.webp" alt="ธนดล วันบรรจบ" class="profile-img">
-        <div class="profile-badge">Webmaster</div>
-      </div>
-      <div class="info-grid reveal reveal-delay-1">
-        <div class="info-row"><span class="info-label">ชื่อ</span><span class="info-value">นายธนดล วันบรรจบ</span></div>
-        <div class="info-row"><span class="info-label">ชื่อเล่น</span><span class="info-value">ดิว</span></div>
-        <div class="info-row"><span class="info-label">อายุ</span><span class="info-value">26 ปี</span></div>
-        <div class="info-row"><span class="info-label">อีเมล</span><span class="info-value"><a
-              href="mailto:tanadol.forwork@gmail.com">tanadol.forwork@gmail.com</a></span></div>
-        <div class="info-row"><span class="info-label">โทรศัพท์</span><span class="info-value">065-463-6097</span></div>
-        <div class="info-row"><span class="info-label">Facebook</span><span class="info-value">Dew Tanadol</span></div>
-        <div class="info-row"><span class="info-label">ที่อยู่</span><span class="info-value">6/1 ม.7 ต.บางระกำ อ.บางเลน
-            จ.นครปฐม 73130</span></div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">About Me</div>
+      <h2 class="section-title reveal">เกี่ยว<span class="blue">กับฉัน</span></h2>
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="profile-wrap reveal">
+            <div class="profile-ring"></div>
+            <img src="/Portfolio/assets/tanadol-1.webp" alt="ธนดล วันบรรจบ" class="profile-img">
+            <div class="profile-badge">Webmaster</div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="info-grid reveal reveal-delay-1">
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">ชื่อ</span>
+              <span class="info-value col">นายธนดล วันบรรจบ</span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">ชื่อเล่น</span>
+              <span class="info-value col">ดิว</span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">อายุ</span>
+              <span class="info-value col">26 ปี</span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">อีเมล</span>
+              <span class="info-value col"><a href="mailto:tanadol.forwork@gmail.com">tanadol.forwork@gmail.com</a></span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">โทรศัพท์</span>
+              <span class="info-value col">065-463-6097</span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">Facebook</span>
+              <span class="info-value col">Dew Tanadol</span>
+            </div>
+            <div class="info-row row g-0">
+              <span class="info-label col-auto">ที่อยู่</span>
+              <span class="info-value col">6/1 ม.7 ต.บางระกำ อ.บางเลน จ.นครปฐม 73130</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- EDUCATION -->
   <section id="education">
-    <div class="section-label reveal">Education</div>
-    <h2 class="section-title reveal">การ<span class="blue">ศึกษา</span></h2>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <img src="/Portfolio/assets/school-1.webp" alt="โรงเรียนพระปฐมวิทยาลัย" class="edu-img">
-        <div class="edu-body">
-          <div class="edu-year">2018</div>
-          <div class="edu-school">โรงเรียนพระปฐมวิทยาลัย</div>
-          <div class="edu-detail">แผนการเรียนวิทย์-คอม (วิทยาศาสตร์-คอมพิวเตอร์)</div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">Education</div>
+      <h2 class="section-title reveal">การ<span class="blue">ศึกษา</span></h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="edu-card reveal h-100">
+            <img src="/Portfolio/assets/school-1.webp" alt="โรงเรียนพระปฐมวิทยาลัย" class="edu-img img-fluid w-100">
+            <div class="edu-body">
+              <div class="edu-year">2018</div>
+              <div class="edu-school">โรงเรียนพระปฐมวิทยาลัย</div>
+              <div class="edu-detail">แผนการเรียนวิทย์-คอม (วิทยาศาสตร์-คอมพิวเตอร์)</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="edu-card reveal reveal-delay-1">
-        <img src="/Portfolio/assets/college-1.webp" alt="มหาวิทยาลัยศิลปากร" class="edu-img">
-        <div class="edu-body">
-          <div class="edu-year">2023</div>
-          <div class="edu-school">มหาวิทยาลัยศิลปากร</div>
-          <div class="edu-detail">คณะวิทยาศาสตร์ · สาขาเทคโนโลยีสารสนเทศ</div>
+
+        <div class="col-md-6">
+          <div class="edu-card reveal reveal-delay-1 h-100">
+            <img src="/Portfolio/assets/college-1.webp" alt="มหาวิทยาลัยศิลปากร" class="edu-img img-fluid w-100">
+            <div class="edu-body">
+              <div class="edu-year">2023</div>
+              <div class="edu-school">มหาวิทยาลัยศิลปากร</div>
+              <div class="edu-detail">คณะวิทยาศาสตร์ · สาขาเทคโนโลยีสารสนเทศ</div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="section-label reveal">Skills</div>
-    <h2 class="section-title reveal">ความ<span class="blue">สามารถ</span></h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🌐</div>
-        <div class="skill-name">Web Management</div>
-        <div class="skill-desc">อัพเดตข้อมูล ดูแลเว็บไซต์ให้ทันสมัยและทำงานได้อย่างมีประสิทธิภาพ</div>
-      </div>
-      <div class="skill-card reveal reveal-delay-1">
-        <div class="skill-icon">💻</div>
-        <div class="skill-name">HTML &amp; Web Dev</div>
-        <div class="skill-desc">มีความรู้ความเข้าใจในภาษา HTML สามารถสร้างและแก้ไขหน้าเว็บได้</div>
-      </div>
-      <div class="skill-card reveal reveal-delay-2">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-name">CMS</div>
-        <div class="skill-desc">มีความเข้าใจในการใช้งาน Content Management System ต่าง ๆ</div>
-      </div>
-      <div class="skill-card reveal reveal-delay-3">
-        <div class="skill-icon">🖥️</div>
-        <div class="skill-name">IT Support</div>
-        <div class="skill-desc">แก้ไขปัญหา Hardware &amp; Software คอมพิวเตอร์ได้อย่างมีประสิทธิภาพ</div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">Skills</div>
+      <h2 class="section-title reveal">ความ<span class="blue">สามารถ</span></h2>
+      <div class="row g-4">
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="skill-card reveal h-100">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-name">Web Management</div>
+            <div class="skill-desc">อัพเดตข้อมูล ดูแลเว็บไซต์ให้ทันสมัยและทำงานได้อย่างมีประสิทธิภาพ</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="skill-card reveal reveal-delay-1 h-100">
+            <div class="skill-icon">💻</div>
+            <div class="skill-name">HTML &amp; Web Dev</div>
+            <div class="skill-desc">มีความรู้ความเข้าใจในภาษา HTML สามารถสร้างและแก้ไขหน้าเว็บได้</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="skill-card reveal reveal-delay-2 h-100">
+            <div class="skill-icon">⚙️</div>
+            <div class="skill-name">CMS</div>
+            <div class="skill-desc">มีความเข้าใจในการใช้งาน Content Management System ต่าง ๆ</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="skill-card reveal reveal-delay-3 h-100">
+            <div class="skill-icon">🖥️</div>
+            <div class="skill-name">IT Support</div>
+            <div class="skill-desc">แก้ไขปัญหา Hardware &amp; Software คอมพิวเตอร์ได้อย่างมีประสิทธิภาพ</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label reveal">Experience</div>
-    <h2 class="section-title reveal">ประสบ<span class="blue">การณ์</span></h2>
-    <div class="exp-wrap">
-      <div class="exp-card reveal">
-        <div class="exp-shine"></div>
-        <div class="exp-company">Optiwise Co., Ltd.</div>
-        <div><span class="exp-position">Webmaster</span></div>
-        <div class="exp-period">📅 มิถุนายน 2024 – สิงหาคม 2025</div>
-      </div>
-      <div class="exp-timeline reveal reveal-delay-1">
-        <h3>เส้นทางการเรียนรู้</h3>
-        <div class="tl-item">
-          <div class="tl-line">
-            <div class="tl-dot"></div>
-            <div class="tl-connector"></div>
-          </div>
-          <div class="tl-content">
-            <div class="tl-year">2018</div>
-            <div class="tl-text">เริ่มเรียนวิทย์-คอม ที่ ร.ร.พระปฐมวิทยาลัย</div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">Experience</div>
+      <h2 class="section-title reveal">ประสบ<span class="blue">การณ์</span></h2>
+      <div class="row g-4 align-items-start">
+
+        <div class="col-md-6">
+          <div class="exp-card reveal h-100">
+            <div class="exp-shine"></div>
+            <div class="exp-company">Optiwise Co., Ltd.</div>
+            <div><span class="exp-position">Webmaster</span></div>
+            <div class="exp-period">📅 มิถุนายน 2024 – สิงหาคม 2025</div>
           </div>
         </div>
-        <div class="tl-item">
-          <div class="tl-line">
-            <div class="tl-dot"></div>
-            <div class="tl-connector"></div>
-          </div>
-          <div class="tl-content">
-            <div class="tl-year">2023</div>
-            <div class="tl-text">จบการศึกษา IT สาขาเทคโนโลยีสารสนเทศ ม.ศิลปากร</div>
+
+        <div class="col-md-6">
+          <div class="exp-timeline reveal reveal-delay-1">
+            <h3>เส้นทางการเรียนรู้</h3>
+            <div class="tl-item">
+              <div class="tl-line">
+                <div class="tl-dot"></div>
+                <div class="tl-connector"></div>
+              </div>
+              <div class="tl-content">
+                <div class="tl-year">2018</div>
+                <div class="tl-text">เริ่มเรียนวิทย์-คอม ที่ ร.ร.พระปฐมวิทยาลัย</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-line">
+                <div class="tl-dot"></div>
+                <div class="tl-connector"></div>
+              </div>
+              <div class="tl-content">
+                <div class="tl-year">2023</div>
+                <div class="tl-text">จบการศึกษา IT สาขาเทคโนโลยีสารสนเทศ ม.ศิลปากร</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-line">
+                <div class="tl-dot"></div>
+                <div class="tl-connector"></div>
+              </div>
+              <div class="tl-content">
+                <div class="tl-year">2024</div>
+                <div class="tl-text">เข้าร่วมงาน Optiwise Co., Ltd. ตำแหน่ง Webmaster</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-line">
+                <div class="tl-dot"></div>
+              </div>
+              <div class="tl-content">
+                <div class="tl-year">2025</div>
+                <div class="tl-text">อัพเดทข้อมูลและดูแลเว็บไซต์บริษัทชั้นนำของไทย</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tl-item">
-          <div class="tl-line">
-            <div class="tl-dot"></div>
-            <div class="tl-connector"></div>
-          </div>
-          <div class="tl-content">
-            <div class="tl-year">2024</div>
-            <div class="tl-text">เข้าร่วมงาน Optiwise Co., Ltd. ตำแหน่ง Webmaster</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-line">
-            <div class="tl-dot"></div>
-          </div>
-          <div class="tl-content">
-            <div class="tl-year">2025</div>
-            <div class="tl-text">อัพเดทข้อมูลและดูแลเว็บไซต์บริษัทชั้นนำของไทย</div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- COLLEGE PROJECTS -->
   <section id="college-projects">
-    <div class="section-label reveal">Projects</div>
-    <h2 class="section-title reveal">รวม<span class="blue">ผลงานในมหาลัย</span></h2>
-    <div class="proj-grid">
-      <div class="proj-card reveal">
-        <div class="proj-thumb">
-          <img src="/Portfolio/assets/project-1.webp" alt="เว็บไซต์ขายรถยนต์">
-          <div class="proj-overlay"></div>
-          <div class="proj-num">PROJECT 01</div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-title">เว็บไซต์ออกแบบและขายรถยนต์</div>
-          <div class="proj-desc">ออกแบบและสร้างเว็บไซต์สำหรับขายรถยนต์ครบวงจร รองรับการแสดงรายละเอียดรุ่น สเปค และระบบ
-            Login</div>
-        </div>
-      </div>
-      <div class="proj-card reveal reveal-delay-1">
-        <div class="proj-thumb">
-          <img src="/Portfolio/assets/project-2.webp" alt="ระบบตรวจจับอาวุธ">
-          <div class="proj-overlay"></div>
-          <div class="proj-num">PROJECT 02</div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-title">ระบบตรวจจับผู้มีอาวุธปืนและอุณหภูมิ</div>
-          <div class="proj-desc">ระบบ ตรวจจับบุคคลที่พกอาวุธปืน พร้อมแจ้งเตือนผ่าน LINE Notify แบบ real-time</div>
-        </div>
-      </div>
-      <div class="proj-card reveal reveal-delay-2">
-        <div class="proj-thumb">
-          <img src="/Portfolio/assets/project-3.webp" alt="เว็บขายเสื้อฟุตบอล">
-          <div class="proj-overlay"></div>
-          <div class="proj-num">PROJECT 03</div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-title">เว็บไซต์ขายเสื้อฟุตบอลมือสอง</div>
-          <div class="proj-desc">แพลตฟอร์ม E-commerce สำหรับซื้อขายเสื้อฟุตบอลมือสอง พร้อมระบบตะกร้าสินค้าและฟิลเตอร์ทีม
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">Projects</div>
+      <h2 class="section-title reveal">รวม<span class="blue">ผลงานในมหาลัย</span></h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="proj-card reveal h-100">
+            <div class="proj-thumb">
+              <img src="/Portfolio/assets/project-1.webp" alt="เว็บไซต์ขายรถยนต์" class="img-fluid w-100">
+              <div class="proj-overlay"></div>
+              <div class="proj-num">PROJECT 01</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-title">เว็บไซต์ออกแบบและขายรถยนต์</div>
+              <div class="proj-desc">ออกแบบและสร้างเว็บไซต์สำหรับขายรถยนต์ครบวงจร รองรับการแสดงรายละเอียดรุ่น สเปค และระบบ Login</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="proj-card reveal reveal-delay-3">
-        <div class="proj-thumb">
-          <img src="/Portfolio/assets/project-4.webp" alt="แอปพลิเคชันดูดวง">
-          <div class="proj-overlay"></div>
-          <div class="proj-num">PROJECT 04</div>
+
+        <div class="col-md-6">
+          <div class="proj-card reveal reveal-delay-1 h-100">
+            <div class="proj-thumb">
+              <img src="/Portfolio/assets/project-2.webp" alt="ระบบตรวจจับอาวุธ" class="img-fluid w-100">
+              <div class="proj-overlay"></div>
+              <div class="proj-num">PROJECT 02</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-title">ระบบตรวจจับผู้มีอาวุธปืนและอุณหภูมิ</div>
+              <div class="proj-desc">ระบบ ตรวจจับบุคคลที่พกอาวุธปืน พร้อมแจ้งเตือนผ่าน LINE Notify แบบ real-time</div>
+            </div>
+          </div>
         </div>
-        <div class="proj-body">
-          <div class="proj-title">แอปพลิเคชันดูดวง "The Teller Blink"</div>
-          <div class="proj-desc">แอปมือถือดูดวงครบครัน ทั้งเซียมซี ดูดวงรายวัน สิ่งของประจำวัน พร้อม UI สไตล์ไทย</div>
+
+        <div class="col-md-6">
+          <div class="proj-card reveal reveal-delay-2 h-100">
+            <div class="proj-thumb">
+              <img src="/Portfolio/assets/project-3.webp" alt="เว็บขายเสื้อฟุตบอล" class="img-fluid w-100">
+              <div class="proj-overlay"></div>
+              <div class="proj-num">PROJECT 03</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-title">เว็บไซต์ขายเสื้อฟุตบอลมือสอง</div>
+              <div class="proj-desc">แพลตฟอร์ม E-commerce สำหรับซื้อขายเสื้อฟุตบอลมือสอง พร้อมระบบตะกร้าสินค้าและฟิลเตอร์ทีม</div>
+            </div>
+          </div>
         </div>
+
+        <div class="col-md-6">
+          <div class="proj-card reveal reveal-delay-3 h-100">
+            <div class="proj-thumb">
+              <img src="/Portfolio/assets/project-4.webp" alt="แอปพลิเคชันดูดวง" class="img-fluid w-100">
+              <div class="proj-overlay"></div>
+              <div class="proj-num">PROJECT 04</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-title">แอปพลิเคชันดูดวง "The Teller Blink"</div>
+              <div class="proj-desc">แอปมือถือดูดวงครบครัน ทั้งเซียมซี ดูดวงรายวัน สิ่งของประจำวัน พร้อม UI สไตล์ไทย</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CLIENTS -->
+  <!-- WORK PROJECTS / CLIENTS -->
   <section id="work-projects">
-    <div class="section-label reveal">Work Portfolio</div>
-    <h2 class="section-title reveal">ลูกค้าที่<span class="blue">เคยดูแล</span></h2>
-    <p class="clients-intro reveal">รวมผลงานการดูแลเว็บไซต์ให้กับองค์กรและบริษัทชั้นนำของประเทศไทย ในช่วงเวลาที่ทำงานที่
-      Optiwise</p>
-    <div class="clients-showcase">
-      <div class="client-feature reveal">
-        <img src="/Portfolio/assets/work-1.webp">
-        <div class="client-feature-name">บริษัท ดุสิตธานี จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-1">
-        <img src="/Portfolio/assets/work-2.webp">
-        <div class="client-feature-name">บริษัท กลุ่มเซ็นทรัล จำกัด</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-2">
-        <img src="/Portfolio/assets/work-3.webp">
-        <div class="client-feature-name">บริษัท การบินกรุงเทพ จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-3">
-        <img src="/Portfolio/assets/work-4.webp">
-        <div class="client-feature-name">บริษัท ผลิตไฟฟ้า จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-4">
-        <img src="/Portfolio/assets/work-5.webp">
-        <div class="client-feature-name">บริษัท สเตคอน กรุป จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-5">
-        <img src="/Portfolio/assets/work-6.webp">
-        <div class="client-feature-name">บริษัท เอส โฮเทล แอนด์ รีสอร์ท จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-6">
-        <img src="/Portfolio/assets/work-7.webp">
-        <div class="client-feature-name">บริษัท พีเอสจี คอร์ปอเรชั่น จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-7">
-        <img src="/Portfolio/assets/work-8.webp">
-        <div class="client-feature-name">บริษัท แพทย์รังสิต เฮลท์แคร กรุป จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-8">
-        <img src="/Portfolio/assets/work-9.webp">
-        <div class="client-feature-name">บริษัท พีพีพี กรีน คอมเพล็กซ์ จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-9">
-        <img src="/Portfolio/assets/work-10.webp">
-        <div class="client-feature-name">บริษัท อิชิตัน กรุป จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-10">
-        <img src="/Portfolio/assets/work-11.webp">
-        <div class="client-feature-name">บริษัท เอพี (ไทยแลนด์) จำกัด (มหาชน)</div>
-      </div>
-      <div class="client-feature reveal reveal-delay-11">
-        <img src="/Portfolio/assets/work-12.webp">
-        <div class="client-feature-name">บริษัท ช.การช่าง จำกัด (มหาชน)</div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="section-label reveal">Work Portfolio</div>
+      <h2 class="section-title reveal">ลูกค้าที่<span class="blue">เคยดูแล</span></h2>
+      <p class="clients-intro reveal">รวมผลงานการดูแลเว็บไซต์ให้กับองค์กรและบริษัทชั้นนำของประเทศไทย ในช่วงเวลาที่ทำงานที่ Optiwise</p>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="client-feature reveal h-100">
+            <img src="/Portfolio/assets/work-1.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท ดุสิตธานี จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-1 h-100">
+            <img src="/Portfolio/assets/work-2.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท กลุ่มเซ็นทรัล จำกัด</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-2 h-100">
+            <img src="/Portfolio/assets/work-3.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท การบินกรุงเทพ จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-3 h-100">
+            <img src="/Portfolio/assets/work-4.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท ผลิตไฟฟ้า จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-4 h-100">
+            <img src="/Portfolio/assets/work-5.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท สเตคอน กรุป จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-5 h-100">
+            <img src="/Portfolio/assets/work-6.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท เอส โฮเทล แอนด์ รีสอร์ท จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-6 h-100">
+            <img src="/Portfolio/assets/work-7.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท พีเอสจี คอร์ปอเรชั่น จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-7 h-100">
+            <img src="/Portfolio/assets/work-8.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท แพทย์รังสิต เฮลท์แคร กรุป จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-8 h-100">
+            <img src="/Portfolio/assets/work-9.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท พีพีพี กรีน คอมเพล็กซ์ จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-9 h-100">
+            <img src="/Portfolio/assets/work-10.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท อิชิตัน กรุป จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-10 h-100">
+            <img src="/Portfolio/assets/work-11.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท เอพี (ไทยแลนด์) จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="client-feature reveal reveal-delay-11 h-100">
+            <img src="/Portfolio/assets/work-12.webp" class="img-fluid w-100">
+            <div class="client-feature-name">บริษัท ช.การช่าง จำกัด (มหาชน)</div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <!-- <div class="clients-grid">
-    <div class="client-chip reveal">บริษัท ผลิตไฟฟ้า จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-1">บริษัท สเตคอน กรุป จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-2">บริษัท เอส โฮเทล แอนด์ รีสอร์ท จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-3">บริษัท พีเอสจี คอร์ปอเรชั่น จำกัด (มหาชน)</div>
-    <div class="client-chip reveal">บริษัท แพทย์รังสิต เฮลท์แคร กรุป จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-1">บริษัท พีพีพี กรีน คอมเพล็กซ์ จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-2">บริษัท อิชิตัน กรุป จำกัด (มหาชน)</div>
-    <div class="client-chip reveal reveal-delay-3">บริษัท เอพี (ไทยแลนด์) จำกัด (มหาชน)</div>
-    <div class="client-chip reveal">บริษัท ช.การช่าง จำกัด (มหาชน)</div>
-  </div> -->
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-glow"></div>
-    <div class="section-label reveal" style="text-align:center">Get In Touch</div>
-    <h2 class="section-title reveal" style="text-align:center">ข้อมูล<span class="blue">ติดต่อ</span></h2>
-    <div class="contact-card reveal">
-      <p class="contact-subtitle">พร้อมรับโอกาสใหม่ ๆ เสมอ อย่าลังเลที่จะติดต่อมาเลย</p>
-      <div class="contact-items">
-        <div class="contact-row">
-          <div class="contact-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
-          <div>
-            <div class="contact-label">อีเมล</div>
-            <div class="contact-val"><a href="mailto:tanadol.forwork@gmail.com">tanadol.forwork@gmail.com</a></div>
-          </div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="section-label reveal">Get In Touch</div>
+          <h2 class="section-title reveal">ข้อมูล<span class="blue">ติดต่อ</span></h2>
         </div>
-        <div class="contact-row">
-          <div class="contact-icon-wrap"><i class="fa-solid fa-phone"></i></div>
-          <div>
-            <div class="contact-label">โทรศัพท์</div>
-            <div class="contact-val">065-463-6097</div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon-wrap"><i class="fa-brands fa-facebook"></i></div>
-          <div>
-            <div class="contact-label">Facebook</div>
-            <div class="contact-val">Dew Tanadol</div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
-          <div>
-            <div class="contact-label">ที่อยู่</div>
-            <div class="contact-val">6/1 ม.7 ต.บางระกำ อ.บางเลน จ.นครปฐม 73130</div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="contact-card reveal">
+            <p class="contact-subtitle">พร้อมรับโอกาสใหม่ ๆ เสมอ อย่าลังเลที่จะติดต่อมาเลย</p>
+            <div class="contact-items d-flex flex-column gap-3">
+              <div class="contact-row d-flex align-items-center gap-3">
+                <div class="contact-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="contact-label">อีเมล</div>
+                  <div class="contact-val"><a href="mailto:tanadol.forwork@gmail.com">tanadol.forwork@gmail.com</a></div>
+                </div>
+              </div>
+              <div class="contact-row d-flex align-items-center gap-3">
+                <div class="contact-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div class="contact-label">โทรศัพท์</div>
+                  <div class="contact-val">065-463-6097</div>
+                </div>
+              </div>
+              <div class="contact-row d-flex align-items-center gap-3">
+                <div class="contact-icon-wrap"><i class="fa-brands fa-facebook"></i></div>
+                <div>
+                  <div class="contact-label">Facebook</div>
+                  <div class="contact-val">Dew Tanadol</div>
+                </div>
+              </div>
+              <div class="contact-row d-flex align-items-center gap-3">
+                <div class="contact-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div class="contact-label">ที่อยู่</div>
+                  <div class="contact-val">6/1 ม.7 ต.บางระกำ อ.บางเลน จ.นครปฐม 73130</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
+  <footer class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-4 px-lg-5">
     <span class="foot-brand">Portfolio-Tanadol Wanbanjob</span>
     <span>© 2025 ธนดล วันบรรจบ · Showcase Portfolio</span>
   </footer>
 
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Hamburger menu toggle
+    // Hamburger menu toggle (custom, keep for compatibility)
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
     navToggle?.addEventListener('click', () => {
       navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
     });
-    // ปิดเมนูเมื่อคลิก link
     navLinks?.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
+        // collapse Bootstrap navbar if open
+        const bsCollapse = document.getElementById('navLinksCollapse');
+        if (bsCollapse && bsCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(bsCollapse).hide();
+        }
       });
     });
   </script>
